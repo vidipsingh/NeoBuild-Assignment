@@ -20,7 +20,6 @@ app.use('/api/auth', authRoutes);
 app.use('/api/resume', resumeRoutes);
 app.use('/api/search', searchRoutes);
 
-// Error handler
 app.use(errorHandler);
 
 const PORT = process.env.PORT || 3000;

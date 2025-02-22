@@ -6,7 +6,6 @@ const searchResumes = async (req, res) => {
     const { name } = req.body;
     const applicants = await Applicant.find();
     
-    // Decrypt names and filter
     const matchingApplicants = applicants.filter(applicant => {
       const decryptedName = decrypt(applicant.name).toLowerCase();
       return decryptedName.includes(name.toLowerCase());
